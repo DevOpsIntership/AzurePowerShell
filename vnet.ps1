@@ -10,5 +10,5 @@ $VirtualNetwork = New-AzVirtualNetwork -Name $name -Location $location -Resource
 for ($i = 0; $i -lt $arraysubnet.Count; $i++) {
   Add-AzVirtualNetworkSubnetConfig -Name $subnetName[$i] -VirtualNetwork $VirtualNetwork -AddressPrefix $arraysubnet[$i] 
 }
-$virtualNetwork | Set-AzVirtualNetwork
+$VirtualNetwork | Set-AzVirtualNetwork
 
